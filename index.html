@@ -402,7 +402,7 @@ html:lang(km) .quote blockquote p{font-size:28px;line-height:1.8;letter-spacing:
       <h2 data-i18n="bookH">កក់ការពិគ្រោះ</h2>
       <p data-i18n="bookP"></p>
       <dl class="contact">
-        <div><dt>Telegram</dt><dd><a href="https://t.me/a661313" target="_blank" rel="noopener">@a661313</a></dd></div>
+        <div><dt>Telegram</dt><dd><a href="https://t.me/a661313" target="_blank" rel="noopener" data-tg>@a661313</a></dd></div>
         <div><dt data-i18n="addrT">អាសយដ្ឋាន</dt><dd data-i18n="addrV">ភ្នំពេញ កម្ពុជា [អាសយដ្ឋានលម្អិត]</dd></div>
         <div><dt data-i18n="hoursT">ម៉ោងបើក</dt><dd data-i18n="hoursV">ច័ន្ទ–អាទិត្យ 09:00–18:00</dd></div>
         <div><dt data-i18n="langT">ភាសា</dt><dd><span lang="km">ខ្មែរ</span>, <span lang="zh">中文</span>, English</dd></div>
@@ -447,6 +447,29 @@ html:lang(km) .quote blockquote p{font-size:28px;line-height:1.8;letter-spacing:
 
 <script>
 (function(){
+  /* ================= 网站基本信息：改这里就行 =================
+     Telegram 只写用户名，不要带 @ 和网址。
+     地址、营业时间三种语言各写一遍。改完点 Commit changes 即可。 */
+  var SITE = {
+    telegram: 'xixi66688',
+    address: {
+      km: 'ភ្នំពេញ កម្ពុជា [អាសយដ្ឋានលម្អិត]',
+      zh: '柬埔寨金边 [详细地址]',
+      en: 'Phnom Penh, Cambodia [full address]'
+    },
+    hours: {
+      km: 'ច័ន្ទ–អាទិត្យ 09:00–22:00',
+      zh: '周一至周日 09:00–22:00',
+      en: 'Mon–Sun 09:00–22:00'
+    },
+    hoursShort: {
+      km: 'ប្រចាំថ្ងៃ 09:00–22:00',
+      zh: '每天 09:00–22:00',
+      en: 'Daily 09:00–22:00'
+    }
+  };
+  /* ============================================================ */
+
   /* ================= 文案（三语） =================
      km = 柬文（默认） zh = 中文 en = English
      改文字只改这里，不用动下面的代码。 */
@@ -480,7 +503,7 @@ html:lang(km) .quote blockquote p{font-size:28px;line-height:1.8;letter-spacing:
       fName:'ឈ្មោះ', fNameErr:'សូមបំពេញឈ្មោះ', fTel:'លេខទូរស័ព្ទ ឬ Telegram', fTelErr:'សូមបំពេញលេខទូរស័ព្ទ ឬ Telegram ដើម្បីឲ្យអ្នកប្រឹក្សាទាក់ទងអ្នកបាន',
       fDept:'សេវាកម្មដែលចង់ដឹង', fDeptNone:'មិនទាន់ដឹង ចង់ពិគ្រោះសិន', fNote:'កំណត់សម្គាល់ (មិនចាំបាច់)', fSubmit:'ដាក់ស្នើការកក់',
       fNoteTip:'ក្រោយដាក់ស្នើ ព័ត៌មាននឹងត្រូវបានចម្លងទុក។ គ្រាន់តែបិទភ្ជាប់ក្នុង Telegram ហើយផ្ញើ។',
-      doneT:'បានចម្លងព័ត៌មានកក់រួចហើយ', doneP:'Telegram បានបើកហើយ។ នៅក្នុងការសន្ទនាជាមួយ @a661313 សូមចុចឲ្យយូរ បិទភ្ជាប់ ហើយផ្ញើ។',
+      doneT:'បានចម្លងព័ត៌មានកក់រួចហើយ', doneP:'Telegram បានបើកហើយ។ នៅក្នុងការសន្ទនាជាមួយ {tg} សូមចុចឲ្យយូរ បិទភ្ជាប់ ហើយផ្ញើ។',
       doneRetry:'Telegram មិនបើក?', doneLink:'ចុចទីនេះ',
       msg:{head:'[ការកក់ពីគេហទំព័រ]',name:'ឈ្មោះ',tel:'ទំនាក់ទំនង',dept:'សេវាកម្ម',note:'កំណត់សម្គាល់'},
       barMsg:'ផ្ញើសារ'
@@ -514,7 +537,7 @@ html:lang(km) .quote blockquote p{font-size:28px;line-height:1.8;letter-spacing:
       fName:'你的称呼', fNameErr:'请填写称呼', fTel:'电话或 Telegram', fTelErr:'请填写电话或 Telegram，方便顾问联系你',
       fDept:'想了解的项目', fDeptNone:'还没想好，先咨询', fNote:'备注（选填）', fSubmit:'提交预约',
       fNoteTip:'提交后预约信息会自动复制，在 Telegram 对话框里粘贴发送即可。',
-      doneT:'预约信息已复制', doneP:'Telegram 已经打开，在和顾问 @a661313 的对话框里长按粘贴，发送就完成了。',
+      doneT:'预约信息已复制', doneP:'Telegram 已经打开，在和顾问 {tg} 的对话框里长按粘贴，发送就完成了。',
       doneRetry:'没有自动打开？', doneLink:'点这里打开 Telegram',
       msg:{head:'【官网预约】',name:'称呼',tel:'联系方式',dept:'项目',note:'备注'},
       barMsg:'在线留言'
@@ -548,7 +571,7 @@ html:lang(km) .quote blockquote p{font-size:28px;line-height:1.8;letter-spacing:
       fName:'Your name', fNameErr:'Please enter your name', fTel:'Phone or Telegram', fTelErr:'Please enter a phone number or Telegram so we can reach you',
       fDept:'Treatment of interest', fDeptNone:'Not sure yet', fNote:'Notes (optional)', fSubmit:'Send booking',
       fNoteTip:'Your details are copied automatically. Just paste them into the Telegram chat and send.',
-      doneT:'Booking details copied', doneP:'Telegram is open. In the chat with @a661313, press and hold to paste, then send.',
+      doneT:'Booking details copied', doneP:'Telegram is open. In the chat with {tg}, press and hold to paste, then send.',
       doneRetry:'Telegram did not open?', doneLink:'Tap here',
       msg:{head:'[Website booking]',name:'Name',tel:'Contact',dept:'Treatment',note:'Notes'},
       barMsg:'Message us'
@@ -636,7 +659,7 @@ html:lang(km) .quote blockquote p{font-size:28px;line-height:1.8;letter-spacing:
     panel.innerHTML='<div><h3>'+esc(d.name[lang])+'</h3><p class="panel-desc">'+esc(d.desc[lang])+'</p></div>'+
       '<ul class="items">'+d.items[lang].map(function(i){return '<li>'+esc(i)+'</li>';}).join('')+'</ul>'+
       (d.docs.length?'<div class="docs-row"><span>'+esc(t.leadDocs)+'</span>'+d.docs.map(function(k){return '<span class="chip"><img src="'+DOCS[k].img+'" alt="">'+esc(docName(DOCS[k]))+'</span>';}).join('')+'</div>':'')+
-      '<a class="btn btn-primary" href="https://t.me/a661313" target="_blank" rel="noopener">'+esc(t.consult(d.name[lang]))+'</a>';
+      '<a class="btn btn-primary" href="https://t.me/'+SITE.telegram+'" target="_blank" rel="noopener">'+esc(t.consult(d.name[lang]))+'</a>';
   }
   function renderSteps(){
     document.getElementById('steps').innerHTML = T[lang].steps.map(function(s,i){
@@ -652,9 +675,13 @@ html:lang(km) .quote blockquote p{font-size:28px;line-height:1.8;letter-spacing:
   function apply(l){
     if(!T[l])l='km';
     lang=l; var t=T[l];
+    t.addrV=SITE.address[l]; t.hoursV=SITE.hours[l]; t.factHoursV=SITE.hoursShort[l];
+    var tg='https://t.me/'+SITE.telegram;
+    document.querySelectorAll('a[href^="https://t.me/"]').forEach(function(a){a.href=tg;});
+    document.querySelectorAll('[data-tg]').forEach(function(el){el.textContent='@'+SITE.telegram;});
     document.documentElement.lang=l;
     document.title=t.htmlTitle;
-    document.querySelectorAll('[data-i18n]').forEach(function(el){var v=t[el.dataset.i18n];if(typeof v==='string')el.textContent=v;});
+    document.querySelectorAll('[data-i18n]').forEach(function(el){var v=t[el.dataset.i18n];if(typeof v==='string')el.textContent=v.replace('{tg}','@'+SITE.telegram);});
     document.querySelectorAll('[data-i18n-html]').forEach(function(el){el.innerHTML=t[el.dataset.i18nHtml];});
     document.querySelectorAll('[data-i18n-alt]').forEach(function(el){el.alt=t[el.dataset.i18nAlt];});
     document.querySelectorAll('[data-i18n-aria]').forEach(function(el){el.setAttribute('aria-label',t[el.dataset.i18nAria]);});
@@ -696,7 +723,7 @@ html:lang(km) .quote blockquote p{font-size:28px;line-height:1.8;letter-spacing:
     if(!ok)return;
     var m=T[lang].msg, sel=form.dept;
     var msg=m.head+'\n'+m.name+': '+form.name.value.trim()+'\n'+m.tel+': '+form.tel.value.trim()+'\n'+m.dept+': '+sel.options[sel.selectedIndex].text+(form.note.value.trim()?'\n'+m.note+': '+form.note.value.trim():'');
-    function go(){form.classList.add('sent');window.open('https://t.me/a661313','_blank','noopener');}
+    function go(){form.classList.add('sent');window.open('https://t.me/'+SITE.telegram,'_blank','noopener');}
     if(navigator.clipboard&&navigator.clipboard.writeText){navigator.clipboard.writeText(msg).then(go,go);}
     else{var ta=document.createElement('textarea');ta.value=msg;document.body.appendChild(ta);ta.select();try{document.execCommand('copy');}catch(_){}document.body.removeChild(ta);go();}
   });
